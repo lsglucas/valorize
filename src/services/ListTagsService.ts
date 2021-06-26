@@ -1,0 +1,23 @@
+import { getCustomRepository } from "typeorm";
+import { TagsRepositories } from "../repositories/TagsRepositories";
+import { classToPlain } from "class-transformer";
+
+class ListTagsService {
+	async execute() {
+		const tagsRepository = getCustomRepository(TagsRepositories);
+		const tags = await tagsRepository.find();
+
+		// tags = tags.map((tag) => ({
+		// 	...tag,
+		// 	nameCuston: `#${tag.name}`,
+		// }));
+
+		if (!tags) {
+			throw new Error("Not found");
+		}
+
+		return classToPlain(tags);
+	}
+}
+
+export { ListTagsService };
