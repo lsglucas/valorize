@@ -90,7 +90,9 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+You must have a [Sentry](https://sentry.io/welcome/) account, after creating your account you will set up an express project inside sentry, their tutorial is really straightforward to follow.
+
+NPM and Yarn are also needed in to run the api.
 
 * yarn
 
@@ -119,6 +121,18 @@ This is an example of how to list things you need to use the software and how to
    yarn dev
    ```
 
+### dotenv
+
+You must have a `.env` file in the root directory to run this api.  
+The file must contain two values: `SENTRY_DSN` with your own sentry's DSN url, and `SECRET_TOKEN_KEY` with any MD5Hash for JWT
+
+* `.env` example
+
+   ```sh
+   SENTRY_DSN=https://xxx@xxx.ingest.sentry.io/0
+   SECRET_TOKEN_KEY=MD5Hash
+   ```
+  
 <!-- USAGE EXAMPLES -->
 ## 📱 Usage
 
