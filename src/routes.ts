@@ -21,10 +21,19 @@ const listUserReceivedComplimentsController = new ListUserReceivedComplimentsCon
 const listTagsController = new ListTagsController();
 const listUsersController = new ListUsersController();
 
-router.post("/users", createUserController.handle);
+// Auth
 router.post("/login", authenticateUserController.handle);
-router.post("/compliment", ensureAuth, createComplimentController.handle);
+
+// Tags
 router.post("/tags", ensureAuth, ensureAdmin, createTagController.handle);
+router.get("/tags", ensureAuth, listTagsController.handle);
+
+// Users
+router.get("/users", ensureAuth, ensureAdmin, listUsersController.handle);
+router.post("/users", createUserController.handle);
+
+// Compliments
+router.post("/compliment", ensureAuth, createComplimentController.handle);
 router.get(
 	"/users/compliments/send",
 	ensureAuth,
@@ -35,7 +44,10 @@ router.get(
 	ensureAuth,
 	listUserReceivedComplimentsController.handle
 );
-router.get("/tags", ensureAuth, listTagsController.handle);
-router.get("/users", ensureAuth, ensureAdmin, listUsersController.handle);
+
+// Sentry test route
+router.get("/debug-sentry", () => {
+	throw new Error("Sentry test error!");
+});
 
 export { router };
