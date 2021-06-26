@@ -61,7 +61,7 @@
 <!-- ABOUT THE PROJECT -->
 ## 📑 About The Project
 
-This project was develop during [_NLW 06_](#about-nlw). It's main objective was to create a simple but complete back-end api while learning about NodeJS, and related [technologies](#built-with). Valorize makes it possible for you to recognize and appreciate your colleagues ♥ through an JWT token authentication, type of compliment using tags, and finally you can send a compliment with a tag and message to another registered user.  
+This project was develop during [_NLW 06_](#about-nlw). It's main objective was to create a simple but complete back-end api while learning about NodeJS, and related [technologies](#built-with). Valorize makes it possible for you to recognize and appreciate your colleagues ♥ through a JWT authentication, type of compliment using tags, and finally you can send a compliment with a tag and message to another registered user.  
 Apart from all of that features I have added Sentry for capture and report errors, and the Swagger UI for easier tests and endpoints documentation.
 
 ### About NLW
