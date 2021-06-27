@@ -4,8 +4,6 @@ import { Express } from "express";
 import { config } from "dotenv";
 
 export function sentry(app: Express) {
-	config({ path: __dirname + "/.env" });
-
 	init({
 		dsn: process.env.SENTRY_DSN,
 		integrations: [
