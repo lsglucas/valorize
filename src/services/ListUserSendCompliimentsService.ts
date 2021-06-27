@@ -13,7 +13,7 @@ class ListUserSendComplimentsService {
 			where: {
 				user_sender: user_id,
 			},
-			relations: ["userSender", "userReceiver", "tag"],
+			// relations: ["userSender", "userReceiver", "tag"],
 		});
 
 		if (!compliments) {
