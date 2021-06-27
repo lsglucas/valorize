@@ -79,7 +79,7 @@ I recommend this event for anyone that speaks Portuguese and want to learn tech,
 * [TypeORM](https://typeorm.io/#/)
 * [Sentry](https://sentry.io)
 * [Swagger UI](https://github.com/scottie1984/swagger-ui-express#readme)
-* [SQLite3](htthttps://www.sqlite.org/index.html)
+* [SQLite](htthttps://www.sqlite.org/index.html)
 * [bcryptjs](https://github.com/dcodeIO/bcrypt.js#readme)
 * [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken#readme)
 
